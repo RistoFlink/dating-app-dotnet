@@ -2,15 +2,34 @@
   <h2 class="text-center text-primary">Sign up</h2>
   <hr>
 
-  <app-text-input [formControl]="$any(registerForm.controls['username'])" [label]="'Username'">
-  </app-text-input>
+  <div class="mb-3">
+    <label style="margin-right: 10px;">I am a: </label>
+    <label class="form-check-label" style="margin-right: 10px;">
+      <input type="radio" class="form-check-input" value="male" formControlName="gender" style="margin-right: 5px;">Male
+    </label>
+    <label class="form-check-label" style="margin-right: 10px;">
+      <input type="radio" class="form-check-input" value="female" formControlName="gender"
+        style="margin-right: 5px;">Female
+    </label>
+    <label class="form-check-label" style="margin-right: 10px;">
+      <input type="radio" class="form-check-input" value="other" formControlName="gender"
+        style="margin-right: 5px;">Other
+    </label>
+  </div>
 
-  <app-text-input [formControl]="$any(registerForm.controls['password'])" [label]="'Password'" [type]="'Password'">
-  </app-text-input>
+  <app-text-input formControlName="username" label="Username"></app-text-input>
 
-  <app-text-input [formControl]="$any(registerForm.controls['confirmPassword'])" [label]="'Confirm password'"
-    [type]="'Password'">
-  </app-text-input>
+  <app-text-input formControlName="knownAs" label="Known as"></app-text-input>
+
+  <app-text-input formControlName="dateOfBirth" label="Date of birth"></app-text-input>
+
+  <app-text-input formControlName="city" label="City"></app-text-input>
+
+  <app-text-input formControlName="country" label="Country"></app-text-input>
+
+  <app-text-input formControlName="password" label="Password" type="password"></app-text-input>
+
+  <app-text-input formControlName="confirmPassword" label="Confirm password" type="password"></app-text-input>
 
   <div class="form-group text-center">
     <button class="btn btn-success me-2" type="submit">Register</button>

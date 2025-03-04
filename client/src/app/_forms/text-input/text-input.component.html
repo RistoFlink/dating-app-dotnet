@@ -8,5 +8,5 @@
         be at least {{control.errors?.['minlength'].requiredLength}} characters long</div>
     <div *ngIf="control.hasError('maxlength')" class="invalid-feedback text-start">{{label()}} can't
         be more than {{control.errors?.['maxlength'].requiredLength}} characters long </div>
-    <div *ngIf="control.hasError('isMatching')" class="invalid-feedback text-start">Passwords do not match!</div>
+    <div *ngIf="control.hasError('isMatching')" class="invalid-feedback text-start">Passwords do not match! </div>
 </div>
